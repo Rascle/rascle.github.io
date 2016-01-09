@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery One</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="jquery-2.1.4.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>jQuery One</h1>
+    <section>
+      <ul>
+        <li>You will code in this index.html file, save and refresh to see the results of your work.</li>
+        <li><a href="directions.html" target="_blank">Directions...</a></li>
+      </ul>
+    </section>
+    <!-- YOUR HTML MARKUP GOES BELOW THIS COMMENT  -->
+    <div id="container">
+      <h1>A Wonderful Heading</h1>
+      <p id="target">Plus some important text,</p>
+      <p>which will give you:</p>
+        <div class="holder">
+          <ul>
+            <li>Information</li>
+            <li>Instructions</li>
+            <li>Ideas</li>
+          </ul>
+        </div>
+        <div class="holder">
+          <ul>
+            <li>For learning</li>
+            <li>For practice</li>
+            <li>For creating</li>
+          </ul>
+        </div>
+    </div>
+    <!-- YOUR HTML MARKUP GOES ABOVE THIS COMMENT  -->
+  </div>
+  <script>
+  //exercise 1
+    var allDivs = $('div');
+    var allULs = $('ul');
+    $('p').css('color', 'blue');
+    $('#container').css('background-color', 'red');
+    $('.holder').css('border', '1px solid black');
+    $('li').css('font-weight', 'bold');
+    $('p').not('#target').css('display', 'none');
+    
+  //exercise 2
+  
+    $('#container').prepend('<div>Hello</div>');
+    $('<div>Good-bye</div>').appendTo('#container');
+    $('body').prepend('<div></div>');
+    $('body').after('<div></div>');
+    $('.holder').first().before('<div id="first"><h2>Some New Text Before</h2></div>');
+    $('.holder').last().after('<div id="last"><h2>Some more text after</h2></div>');
+    var newDetachedDiv = $('<div>PDT (Previously Detached Text)</div>');
+    $(newDetachedDiv).css('color', 'purple').css('font-size', '28pt').css('font-weight', 'bold');
+    $(newDetachedDiv).appendTo('body');
+  </script>
+</body>
+
+</html>
